@@ -14,7 +14,7 @@ const Navbar = ({ onSearch, activeCategory, categories, onCategoryChange, onGoHo
             e('path', { d: 'M13 10V3L4 14h7v7l9-11h-7z' })
           )
         ),
-        e('h1', { className: 'text-2xl font-bold font-logo bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity' }, 'NOVA')
+        e('h1', { className: 'text-2xl font-bold font-logo bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity' }, 'PORTAL 8')
       ),
 
       // Search

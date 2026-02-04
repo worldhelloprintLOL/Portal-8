@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Arcade - Premium Unblocked Gaming</title>
+  <title>Portal 8 - Premium Unblocked Gaming</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,14 +21,9 @@
     }
     .font-logo { font-family: 'Orbitron', sans-serif; }
     
-    /* Advanced Animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes reveal {
-      from { clip-path: inset(0 100% 0 0); }
-      to { clip-path: inset(0 0 0 0); }
     }
     @keyframes float {
       0% { transform: translateY(0px); }
@@ -43,7 +37,6 @@
     }
 
     .animate-fade-up { animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-    .animate-reveal { animation: reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
     .animate-float { animation: float 4s ease-in-out infinite; }
     .pulse-glow { animation: pulse-glow 2s infinite; }
 
@@ -52,7 +45,6 @@
     .stagger-3 { animation-delay: 0.3s; }
     .stagger-4 { animation-delay: 0.4s; }
 
-    /* Custom Glassmorphism */
     .glass { 
       background: rgba(15, 23, 42, 0.6); 
       backdrop-filter: blur(12px); 
@@ -70,13 +62,11 @@
       box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
     }
 
-    /* Scrollbars */
     ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #334155; border-radius: 20px; }
     ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-    /* Hide horizontal scroll */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
@@ -84,10 +74,8 @@
 {
   "imports": {
     "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "firebase/app": "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js",
-    "firebase/database": "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js",
-    "firebase/": "https://esm.sh/firebase@^12.8.0/",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
