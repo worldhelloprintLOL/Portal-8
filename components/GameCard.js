@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const e = React.createElement;
@@ -6,9 +5,16 @@ const e = React.createElement;
 const GameCard = ({ game, onPlay, isFavorite, onToggleFavorite, isDevMode, onEdit, onDelete, className }) => {
   const handleExternal = (ev) => {
     ev.stopPropagation();
-    const blob = new Blob([game.htmlContent || ''], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    window.open(url, '_blank');
+    if (game.url) {
+      window.open(game.url, '_blank');
+    } else {
+      const newWindow = window.open('', '_blank');
+      if (newWindow) {
+        newWindow.document.open();
+        newWindow.document.write(game.htmlContent || `<html><head><title>${game.title}</title></head><body style="margin:0;background:#000;display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-family:sans-serif;">No content available for this record.</body></html>`);
+        newWindow.document.close();
+      }
+    }
   };
 
   return e('div', { 
